@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Colorization</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+    <div className="contentWrapper">
+<!-- Just an image -->
+<nav class="p-30 navbar navbar-dark bg-dark">
+    <a class="p-25 navbar-brand" href="#">
+      <img src="icon.png"  alt="">
+    </a>
+  </nav>
+
+  <div id="comparison">
+    <figure>
+      <div id="divisor"></div>
+    </figure>
+    <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+  </div>
+  
+  <div class="heading">
+    <h1 class="headingTitle">Image Colorization</h1>
+    <p class="headingSub">
+      Image Colorization, an algorithm that takes in your
+      black and white photos and returns the colorized version
+      of it. The algorithm uses deep learning to classify
+      objects/regions within the image and color them
+      accordingly.
+    </p>
+  </div>
+  
+
+  <section id="inputImage">
+
+  </section>
+  <section class="Results">
+    <h1 style="font-weight: 600">Results</h1>
+    <div class="resContainer">
+      <div class="origContainer">
+        <h4>Original</h4>
+        <img
+          style="
+            object-fit: contain;
+            border-radius: 16px;
+            max-width: 600px;
+          "
+          src="before.png"
+        />
+      </div>
+      <div class="colorContainer">
+        <h4>Colorized</h4>
+        <img
+          style="
+            object-fit: contain;
+            border-radius: 16px;
+            max-width: 600px;
+          "
+          src="after.png"
+        />
+      </div>
+    </div>
+    <button class="bDownload">
+      <h6 class="dText">Download Image</h6>
+    </button>
+    <button class="bUpload">
+      <h6 class="uText">Upload New Image</h6>
+    </button>
+  </section>
+  
+
+  
+  
+  
+  </div>
+
+
+  <script>
+
+var divisor = document.getElementById("divisor"),
+slider = document.getElementById("slider");
+function moveDivisor() { 
+	divisor.style.width = slider.value+"%";
+}
+  </script>
+
+</body>
+</html>
