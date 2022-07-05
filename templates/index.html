@@ -11,7 +11,7 @@
 <body>
     <div className="contentWrapper">
 <!-- Just an image -->
-<nav class="p-30 navbar navbar-dark bg-dark">
+<nav class="p-30 navbar navbar-dark bg-dark" id="nav">
     <a class="p-25 navbar-brand" href="#">
       <img src="icon.png"  alt="">
     </a>
@@ -33,15 +33,15 @@
       objects/regions within the image and color them
       accordingly.
     </p>
-    <input type="file" id="image_input" accept="image/png, image/jpg" onChange={handleChange} className="custom-file-input"/>
+    <input type="file" id="image_input" accept="image/*" onChange={handleChange} className="custom-file-input" required/>
+    
     <input type="submit" id="submit"></input>
-    <img src={file}/>
 
   </div>
   
 
   <section id="inputImage">
-
+    <img id="image" src={file}>
   </section>
   <section class="Results">
     <h1 style="font-weight: 600">Results</h1>
@@ -77,7 +77,22 @@
     </button>
   </section>
   
-
+  <section class="How">
+    <div class="textContain">
+      <h1 style="font-weight: 900">HOW IT WORKS</h1>
+      <p class = "HowText">
+        Given a grayscale photograph as input, this model attacks the problem of hallucinating a plausible 
+        color version of the photograph. The model uses neural networks (unsupervised machine learning, specifically deep learning model) 
+        to turn grayscale images into colorized images with Lab as its color space instead of RGB. 
+        The system is implemented as a feed-forward pass in a CNN at test time and is trained on over a million color images. 
+        Moreover, the model shows that colorization can be a powerful pretext task for self-supervised feature learning, 
+        acting as a cross-channel encoder.This approach results in state-of-the-art performance on several feature learning benchmarks.
+         (Zhang et al. 2016) 
+      </p>
+    </div>
+    <img src="colorization.png">
+  </section>
+  
   
   
   
@@ -94,4 +109,5 @@ function moveDivisor() {
   </script>
 
 </body>
+
 </html>

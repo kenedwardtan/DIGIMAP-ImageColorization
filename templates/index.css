@@ -81,6 +81,10 @@
     text-align: center;
   }
   
+  #nav{
+    padding-left: 75px;
+  }
+
   .App-logo {
     height: 40vmin;
     pointer-events: none;
@@ -217,7 +221,35 @@
   
   background: #FFFFFF;
   }
+
+  .How{ 
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height:fit-content;
+    
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.87)), url(HowBG.jpg);
+    background-size: cover;
+    }
   
+  .textContain{
+    padding-top: 20px;
+    padding-left:100px;
+    padding-right:100px;  
+    color: #FFFFFF;
+  }
+
+  .HowText{
+    font-weight:400;
+    font-size: 19px;
+    padding-top: 20px;
+    text-align: justify;
+  }
   .resContainer{
   
     display: flex;
@@ -334,6 +366,7 @@
     font-weight: 600;
     font-size: 16px;
   }
+  
   #submit {
     content: 'Upload a photo';
     display: inline-block;
