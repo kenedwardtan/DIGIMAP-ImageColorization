@@ -1,8 +1,6 @@
-div#comparison { 
+  div#comparison { 
     width:100%;
     height: 100vh;
-    
-    
     overflow: hidden; }
   div#comparison figure { 
     background-image: url(before.png); 
@@ -43,6 +41,10 @@ div#comparison {
     outline: none;  
   }
   
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+
   input[type=range]::-moz-range-track { 
     -moz-appearance:none;
       height:15px;
@@ -74,12 +76,7 @@ div#comparison {
   input[type=range]:focus::-moz-range-thumb {
       background: rgba(255,255,255,0.5);
      }
-  
-@font-face {
-    font-family: 'Inter';
-  }
-  
-  
+
   .App {
     text-align: center;
   }
@@ -123,7 +120,6 @@ div#comparison {
   .mainWrapper {
     width: 100%;
     height:300px;
-    font-family: 'Inter';
   font-style: normal;
     
   
@@ -132,7 +128,6 @@ div#comparison {
   .contentWrapper {
     width: 100%;
     height:800px;
-    font-family: 'Inter';
   font-style: normal;
    
   }
@@ -153,10 +148,9 @@ div#comparison {
   }
   
   .headingTitle{
+    
   width: 450px;
   height: 154px;
-  
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 800;
   text-shadow: 2px 2px 19px rgba(0, 0, 0, 0.344);
@@ -171,8 +165,6 @@ div#comparison {
   width: 480px;
   text-shadow: 2px 2px 19px rgb(0, 0, 0);
   height: fit-content;
-  
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -199,7 +191,6 @@ div#comparison {
   }
   
   .butTitle{
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
   font-size: 22px;
@@ -300,7 +291,6 @@ div#comparison {
   }
   
   .dText{
-    font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -313,7 +303,6 @@ div#comparison {
   margin: 0px;
   }
   .uText{
-    font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -325,33 +314,37 @@ div#comparison {
   color: #EB9222;
   margin: 0px;
   }
-  
-  .custom-file-input::-webkit-file-upload-button {
-    visibility: hidden;
+  #image_input::-webkit-file-upload-button {
+  visibility: hidden;
   }
   
-  .custom-file-input::before {
+  #image_input {
+    content: 'Upload a photo';
+    display: inline-block;
+    background: white;
+    border-radius: 16px;
+    border-color: #EB9222;
+    border: none;
+    border-radius: 32px;
+    padding: 10px 20px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #EB9222;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  #submit {
     content: 'Upload a photo';
     display: inline-block;
     background: #EB9222;
     border: none;
     border-radius: 32px;
-    padding: 12px 98px;
+    padding: 12px 145px;
     outline: none;
     white-space: nowrap;
-    -webkit-user-select: none;
     cursor: pointer;
     color: white;
     font-weight: 600;
     font-size: 16px;
   }
-  .custom-file-input:hover::before {
-    border-color: none;
-  }
-  .custom-file-input:active::before {
-    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
-  }
-  .custom-file-input{
-    width:450px;
-  }
-  
