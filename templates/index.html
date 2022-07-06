@@ -13,7 +13,7 @@
 <!-- Just an image -->
 <nav class="p-30 navbar navbar-dark bg-dark" id="nav">
     <a class="p-25 navbar-brand" href="#">
-      <img src="icon.png"  alt="">
+      <img src="static/images/icon.png"  alt="">
     </a>
   </nav>
 
@@ -54,7 +54,7 @@
             border-radius: 16px;
             max-width: 600px;
           "
-          src="before.png"
+          src="{{ url_for('static', filename='images/before.jpg') }}"
         />
       </div>
       <div class="colorContainer">
@@ -65,7 +65,7 @@
             border-radius: 16px;
             max-width: 600px;
           "
-          src="after.png"
+          src="data:image/png;base64, {{ after }}"
         />
       </div>
     </div>
@@ -90,7 +90,7 @@
          (Zhang et al. 2016) 
       </p>
     </div>
-    <img src="colorization.png">
+    <img src="static/images/colorization.png">
   </section>
   
   
@@ -105,6 +105,10 @@ var divisor = document.getElementById("divisor"),
 slider = document.getElementById("slider");
 function moveDivisor() { 
 	divisor.style.width = slider.value+"%";
+}
+
+document.getElementById('image_input').onchange = function () {
+  var src = URL.createObjectURL(this.files[0])
 }
   </script>
 
